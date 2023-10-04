@@ -1,0 +1,788 @@
+/* Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Quicksand', sans-serif;
+    list-style: none;
+    text-decoration: none;
+    scroll-behavior: smooth;
+
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+
+}
+
+:root {
+    /* Light mode */
+    --bg-color-light: #ffffff;
+    --text-color-light: #000000;
+    --main-color-light: rgb(87, 130, 87);
+    --second-color: gray;
+    --other-color: #12141c;
+    /* Dark mode  */
+    --bg-color: rgb(13, 19, 13);
+    --text-color: #fff;
+    --main-color: rgb(87, 130, 87);
+    --second-color: gray;
+    --other-color: #12141c;
+    --heading-font: 5.2rem;
+    --second-heading: 3.5rem;
+    --paragraph-font: 1.1rem;
+}
+
+body {
+    background: var(--bg-color);
+    color: var(--text-color);
+}
+
+
+/* ------------------------------ Borde circular para la imagen toggle dark light mode----------------------------- */
+
+.off {
+    background: transparent;
+    border: none;
+    position: relative;
+    width: 30px;
+    height: 30px;
+}
+
+.img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 50%;
+}
+
+.circulo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 3px solid var(--main-color);
+    border-radius: 50%;
+}
+
+.off:hover {
+    cursor: pointer;
+}
+
+/* ----------------------- Estilos para el modo claro ----------------------- */
+
+
+
+body.light-mode {
+    background: var(--bg-color-light);
+    color: var(--text-color-light);
+
+}
+
+body.light-mode .copyright .links a {
+    color: var(--text-color-light);
+}
+
+
+
+/* ----------------------- Estilos para el modo oscuro ---------------------- */
+
+
+body.dark-mode {
+    background: var(--bg-color-dark);
+    color: var(--text-color-dark);
+}
+
+body.dark-mode .copyright .links a {
+    color: var(--text-color-dark);
+}
+
+
+
+/* ----------------------- FIN DE DARK AND LIGHT MODE ----------------------- */
+
+header {
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 22px 16%;
+    border-bottom: 1px solid transparent;
+    transition: all 0.5s ease-in-out;
+}
+
+.logo {
+    color: var(--text-color);
+    font-size: 1.8rem;
+    font-weight: 800;
+}
+
+.logo span {
+    color: var(--main-color);
+
+}
+
+.navbar {
+    display: flex;
+}
+
+.navbar a {
+    color: var(--main-color);
+    font-size: var(--paragraph-font);
+    font-weight: 600;
+    padding: 10px 25px;
+    border-radius: 0.5rem;
+    transition: all 0.5s ease-in-out;
+}
+
+.navbar a:hover {
+    color: var(--main-color);
+    border: 1px solid var(--main-color);
+    transition: border-color 0.3s ease-in-out;
+}
+
+#menu-icon {
+    font-size: 3rem;
+    color: var(--text-color);
+    z-index: 10001;
+    cursor: pointer;
+    display: none;
+}
+
+section {
+    padding: 160px 16% 90px;
+}
+
+.home {
+    height: 80vh;
+    width: 100%;
+    position: relative;
+    background: url(./img/portCam1.png);
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.home-text h1 {
+    margin: 20px 0;
+    font-size: var(--heading-font);
+    font-weight: bold;
+    line-height: 1.1;
+    letter-spacing: 2px;
+}
+
+.home-text h1 span {
+    color: var(--main-color);
+}
+
+.home-text h4 {
+    color: var(--main-color);
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.home-text h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 3rem;
+}
+
+.home-fix-color {
+    color: var(--text-color);
+}
+
+.btn {
+    display: inline-block;
+    padding: 14px 40px;
+    background: var(bg-color-light);
+    font-size: var(--paragraph-font);
+    font-weight: 500;
+    color: var(--main-color);
+    border-radius: 0.5rem;
+    border: 2px solid var(--main-color);
+    transition: all 0.5s ease;
+}
+
+.btn:hover {
+    transform: scale(1.01) translateY(-6px);
+    background: transparent;
+    border: 2px solid var(--main-color);
+}
+
+header.sticky {
+    padding: 20px 3%;
+    background: var(--bg-color);
+    border-bottom: 1px solid #0e1630;
+}
+
+.about {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 2rem;
+}
+
+.about-img img {
+    height: auto;
+    max-width: 460px;
+    border-radius: 4px;
+    width: 100%;
+}
+
+.about-content h4 {
+    margin: 10px 0;
+    color: var(--main-color);
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+.about-content h2 {
+    font-size: var(--second-heading);
+}
+
+.about-content p {
+    color: var(--second-color);
+    font-size: var(--paragraph-font);
+    line-height: 20px;
+    margin-bottom: 2rem;
+    font-weight: 500;
+}
+
+/* -------------------------------- START carrusel -------------------------------- */
+
+.carrousel {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 630px;
+    overflow: hidden;
+}
+
+.carrousel img {
+    width: 0;
+    flex-grow: 1;
+    object-fit: cover;
+    opacity: 0.8;
+    transition: 0.5s ease;
+}
+
+.carrousel img:hover {
+    cursor: crosshair;
+    width: 200px;
+    opacity: 1;
+    filter: contrast(120%);
+}
+
+/* --------------------------------FIN carrusel -------------------------------- */
+
+.heading {
+    text-align: center;
+}
+
+.heading h2 {
+    font-size: var(--second-heading);
+    margin-bottom: 10px;
+}
+
+.heading h4 {
+    color: var(--main-color);
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.services-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, auto));
+    align-items: center;
+    text-align: center;
+    gap: 2rem;
+    margin-top: 5rem;
+}
+
+.box {
+    padding: 30px;
+    background: #12141c;
+    border-top: 5px solid transparent;
+    border-radius: 0.5rem;
+    transform: all 0.5s ease;
+    cursor: pointer;
+}
+
+.box h3 {
+    font-size: 20px;
+    font-weight: 600;
+    transform: all 0.5s ease;
+    margin: 15px 0;
+    color: var(--main-color);
+}
+
+.box p {
+    line-height: 20px;
+    color: var(--text-color);
+    font-size: var(--paragraph-font);
+}
+
+.box:hover {
+    transform: scale(1.01) translateY(-6px);
+    border-bottom: 5px solid var(--main-color);
+}
+
+.box:hover h3 {
+    color: var(--main-color);
+}
+
+/* --------------------------------- Start videos --------------------------------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.videos {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+
+.videos video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.videos .navigation {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.videos .navigation li {
+    list-style: none;
+    cursor: pointer;
+    margin: 0 10px;
+    border-radius: 4px;
+    background: #fff;
+    padding: 3px 3px 0;
+    opacity: 0.7;
+    transition: 0.5s;
+}
+
+
+
+.videos .navigation li:hover {
+    opacity: 1;
+}
+
+.videos .navigation li img {
+    width: 120px;
+    height: 100px;
+    transition: 0.5s;
+}
+
+.videos .navigation li img:hover {
+    width: 200px;
+    height: auto;
+}
+
+/* --------------------------------- Start videos --------------------------------- */
+
+.portfolio-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, auto));
+    align-items: center;
+    gap: 2rem;
+    margin-top: 5rem;
+}
+
+.port img {
+    height: auto;
+    width: 100%;
+    border-radius: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.port {
+    padding: 25px;
+    background: #12141c;
+    border-radius: 0.5rem;
+    transition: 0.5s ease all;
+}
+
+.port:hover {
+    box-shadow: 0px 0px 10px 0px rgb(173, 173, 173);
+    transform: scale(1.02) translateY(-6px);
+    cursor: pointer;
+}
+
+.port h3 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--bg-color-light);
+}
+
+.port h5 {
+    color: var(--main-color);
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.main-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+.box-icon i {
+    font-size: 20px;
+    color: var(--main-color);
+}
+
+
+.contact {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 3rem;
+}
+
+.contact-text h4 {
+    margin: 15px 0;
+    color: var(--main-color);
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.contact-text h2 {
+    font-size: var(--second-heading);
+}
+
+.contact-text p {
+    color: var(--second-color);
+    font-size: var(--paragraph-font);
+    line-height: 30px;
+    margin-bottom: 2rem;
+}
+
+.contact-list {
+    margin-bottom: 3rem;
+}
+
+.contact-list li {
+    margin-bottom: 10px;
+    display: block;
+    color: var(--second-color);
+    font-weight: 600;
+    font-size: var(--paragraph-font);
+
+}
+
+
+.social-icons i {
+    height: 40px;
+    width: 40px;
+    border-radius: 0.5rem;
+    background: var(--other-color);
+    color: var(--main-color);
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    margin-right: 10px;
+    transition: all 0.5s ease;
+}
+
+.social-icons i:hover {
+    transform: scale(1.01) translateY(-6px);
+    color: var(--text-color);
+    background: var(--main-color);
+}
+
+.contact-form form {
+    position: relative;
+}
+
+.contact-form form input,
+form textarea {
+    border: none;
+    outline: none;
+    width: 100%;
+    padding: 18px;
+    background: var(--other-color);
+    color: var(--text-color);
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    border-radius: 0.5rem;
+    transition: 0.5s;
+}
+
+.contact-form form input:focus,
+form textarea:focus {
+    color: var(--main-color);
+}
+
+.contact-form textarea {
+    resize: none;
+    height: 200px;
+}
+
+.contact-form form .send {
+    display: inline-block;
+    font-size: 1.05rem;
+    font-weight: 600;
+    background: var(--main-color);
+    color: var(--text-color);
+    cursor: pointer;
+    width: 180px;
+}
+
+.contact-form form .send:hover {
+    transform: scale(1.01) translateY(-1px);
+    background: transparent;
+    border: 1px solid var(--main-color);
+    color: var(--main-color);
+}
+
+.message-box {
+    color: var(--main-color);
+}
+
+.copyright {
+    justify-content: space-between;
+    text-align: center;
+    display: flex;
+    padding: 10px 10px 10px 10px;
+}
+
+.hr {
+    width: 100%;
+    height: 2px;
+    background: crimson;
+}
+
+.copyright .links {
+    display: flex;
+}
+
+.copyright .links a {
+    padding-left: 10px;
+    padding-right: 10px;
+    color: var(--text-color);
+}
+
+.copyright .links a span:hover {
+    color: var(--main-color);
+}
+
+
+
+
+/* Responsive */
+
+
+@media (max-width: 1325px) {
+    header {
+        padding: 16px 3%;
+    }
+
+    header .sticky {
+        padding: 20px 3%;
+    }
+
+    section {
+        padding: 130px 3% 60px;
+    }
+
+}
+
+@media (max-width: 970px) {
+    :root {
+        --heading-font: 4.2rem;
+        --second-heading: 2.7rem;
+        --paragraph-font: 1rem;
+    }
+
+    section {
+        padding: 70px 3% 60px;
+    }
+
+
+
+    .about {
+        grid-template-columns: 1fr;
+    }
+
+    .about-img {
+        text-align: center;
+    }
+
+    .contact {
+        grid-template-columns: 1fr;
+    }
+
+    .home {
+        height: 85vh;
+        background: none;
+    }
+
+    .home-fix-color {
+        color: inherit;
+    }
+
+    .copyright {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* ------------------------------- Carru FOTOS ------------------------------ */
+
+    .carrousel {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        height: 630px;
+        overflow: hidden;
+    }
+
+    .carrousel img {
+        width: 0;
+        flex-grow: 1;
+        object-fit: cover;
+        opacity: 0.8;
+        transition: 0.5s ease;
+    }
+
+    .carrousel img:hover {
+        cursor: crosshair;
+        width: 200px;
+        opacity: 1;
+        filter: contrast(120%);
+    }
+
+}
+
+@media (max-width: 830px) {
+    :root {
+        --heading-font: 3.7rem;
+        --second-heading: 2.4rem;
+        --paragraph-font: 1rem;
+    }
+
+    #menu-icon {
+        display: block;
+        color: rgb(54, 126, 54);
+    }
+
+    .navbar {
+        position: absolute;
+        top: -600px;
+        right: 0;
+        left: 0;
+        display: flex;
+        flex-direction: column;
+        background: var(--other-color);
+        text-align: left;
+        transition: all 0.5s ease;
+    }
+
+    .navbar a {
+        display: block;
+        padding: 1rem;
+        margin: 1rem;
+    }
+
+    .navbar.active {
+        top: 100%;
+    }
+
+    header .logo {
+        display: none;
+    }
+
+    /* ---------------------------------- video --------------------------------- */
+
+
+    .videos .navigation li img {
+        width: 80px;
+        height: 80px;
+        transition: 0.5s;
+    }
+
+    .videos .navigation li img:hover {
+        width: 100px;
+        height: auto;
+    }
+
+}
+
+
+
+
+
+@media (max-width: 720px) {
+    :root {
+        --heading-font: 3.5rem;
+        --second-heading: 2.2rem;
+        --paragraph-font: 1rem;
+    }
+
+    #menu-icon {
+        display: block;
+        color: rgb(54, 126, 54)
+    }
+
+    .navbar {
+        position: absolute;
+        top: -600px;
+        right: 0;
+        left: 0;
+        display: flex;
+        flex-direction: column;
+        background: var(--other-color);
+        text-align: left;
+        transition: all 0.5s ease;
+    }
+
+    .navbar a {
+        display: block;
+        padding: 1rem;
+        margin: 1rem;
+    }
+
+    .navbar.active {
+        top: 100%;
+    }
+
+    /* ---------------------------------- video --------------------------------- */
+
+    .videos .navigation li img {
+        width: 60px;
+        height: 60px;
+        transition: 0.5s;
+    }
+
+    .videos .navigation li img:hover {
+        width: 80px;
+        height: auto;
+    }
+
+}

@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Personal portfolio </title>
+    <!---custom css link--->
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <!--boxicons  -->
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
+
+
+
+
+</head>
+
+<body>
+
+    <!-- Navbar Section Start-->
+
+    <header>
+        <a href="#" class="logo"><span><img class="img" src="img/LogoCuadrado60px.png" alt="Cambio de idiomas"></span></a>
+        <div class="bx bx-menu" id="menu-icon"></div>
+
+        <ul id="ul"  class="navbar">
+
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#portfolio">My Portfolio</a></li>
+            <li><a href="#contact">Contact</a></li>
+
+        </ul>
+
+        <!-- -------------------------- Nav rigth buttons -------------------------- -->
+
+        <!-- ------------------------------ Translate ------------------------------ -->
+
+        <button id="translateButton" class="off">
+            <img class="img" src="img/idiom.png" alt="Cambio de idiomas" onclick="toggleDiv()">
+        </button>
+        <div id="google_translate_element" style="display: none"></div>
+
+        <!-- --------------------------- Dark light mode --------------------------- -->
+        <button id="toggleButton" class="off">
+            <img class="img" src="img/mode 50 - copia.png" alt="Logo dark and light mode">
+            <div class="circulo"></div>
+        </button>
+    </header>
+    <!--  Navbar Section End -->
+
+
+    <!-- Home Section Start-->
+    <section class="home" id="home">
+        <div class="home-text">
+            <h4>Hey</h4>
+            <div class="home-fix-color">
+            <h1>I'M Camilo Andres <br> <span>Yepes Fonque </span></h1>
+            <h3>Risk management officer</h3>
+            </div>
+            <a href="#about" class="btn">About Me</a>
+            <a href="https://drive.google.com/file/d/14hTpKsxmUqNKtwxVBQycbqQQshYXM0RC/view?usp=drive_link"
+                download="CV es Oscar Rivero.pdf" class="btn">
+                Download CV
+            </a>
+        </div>
+    </section>
+    <!-- Home Section End-->
+
+
+    <!-- About Section Start-->
+    <section class="about" id="about">
+        <div class="about-img">
+            <img src="img/CamiloPerfil.jpeg" alt="Foto Paola">
+
+        </div>
+        <div class="about-content">
+            <h2>About Me</h2>
+            <h4>Hello, I'M Here To Help In Your Next Project</h4>
+            <p>Financial Administrator from the University of Ibagué, Specialist in Financial Risk Management and Master in Financial Administration from the Sergio Arboleda University, with experience in Comprehensive Risk Management in the financial sector and as a professor at the Sergio Arboleda University.
+
+                Risks / SARLAFT / Compliance / Finance / Leadership
+            </p>
+            <a href="#contact" class="btn">Contact Me</a>
+        </div>
+
+    </section>
+    <!-- About Section End-->
+
+    <!-- --------------------------- carrousel Start --------------------------- -->
+    <section class="carrousel">
+        <img src="../img/C1.png" alt="Camilo">
+        <img src="../img/C2.png" alt="Camilo">
+        <img src="../img/C3.png" alt="Camilo">
+        <img src="../img/C4.png" alt="Camilo">
+    </section>
+    <!-- ---------------------------- carrousel end ---------------------------- -->
+
+    <!-- Services Section Start-->
+    <section class="services" id="services">
+        <div class="heading">
+            <h2>My Services</h2>
+            <h4>Better Expericences</h4>
+
+        </div>
+        <div class="services-content">
+            <div class="box">
+                <img src="img/pc.png" alt="">
+                <h3>Mobile App Development</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium iure architecto autem laboriosam
+                    quidem repudiandae accusamus quo cumque quibusdam, officia sed
+                    consequuntur ratione?</p>
+            </div>
+            <div class="box">
+                <img src="img/mouse.png" alt="">
+                <h3>Web App Development</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium iure architecto autem laboriosam
+                    quidem repudiandae accusamus quo cumque quibusdam, officia sed
+                    consequuntur ratione?</p>
+            </div>
+            <div class="box">
+                <img src="img/filmadora.png" alt="">
+                <h3>Video Editing</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium iure architecto autem laboriosam
+                    quidem repudiandae accusamus quo cumque quibusdam, officia sed
+                    consequuntur ratione?</p>
+            </div>
+        </div>
+
+    </section>
+    <!-- Services Section End -->
+
+<!-- ---------------------------- Start videos ----------------------------- -->
+    <section class="videos">
+        <video id="slider" autoplay muted loop>
+          <source src="../video/video1.mp4" type="video/mp4">
+        </video>
+      
+        <ul class="navigation">
+          <li onclick="videoUrl('../video/video1.mp4')"><img src="../img/imgVideo/thumb1act.jpg" alt="test"></li>
+          <li onclick="videoUrl('../video/video2.mp4')"><img src="../img/imgVideo/thumb2act.png" alt="test"></li>
+          <li onclick="videoUrl('../video/video3.mp4')"><img src="../img/imgVideo/thumb3act.png" alt="test"></li>
+          <li onclick="videoUrl('../video/video4.mp4')"><img src="../img/imgVideo/thumb4act.png" alt="test"></li>
+        </ul>
+      </section>
+<!-- ----------------------------- End videos ------------------------------ -->
+
+    <!-- Portfolio Section start -->
+    <section class="portfolio" id="portfolio">
+        <div class="heading">
+            <h2>My Portfolio</h2>
+            <h4>Some Of My Works</h4>
+
+        </div>
+        <div class="portfolio-content">
+            <div class="port">
+                <img src="img/img1.png" alt="">
+                <div class="main-box">
+                    <div class="box-text">
+                        <h5>Development</h5>
+                    </div>
+                    <div class="box-icon">
+                        <i class="bx bx-heart"></i>
+                    </div>
+                </div>
+                <h3>Website Developmeny & Design</h3>
+            </div>
+            <div class="port">
+                <img src="img/img2.png" alt="">
+                <div class="main-box">
+                    <div class="box-text">
+                        <h5>Development</h5>
+                    </div>
+                    <div class="box-icon">
+                        <i class="bx bx-heart"></i>
+                    </div>
+                </div>
+                <h3>Website Developmeny & Design</h3>
+            </div>
+            <div class="port">
+                <img src="img/img3.png" alt="">
+                <div class="main-box">
+                    <div class="box-text">
+                        <h5>Development</h5>
+                    </div>
+                    <div class="box-icon">
+                        <i class="bx bx-heart"></i>
+                    </div>
+                </div>
+                <h3>Website Developmeny & Design</h3>
+            </div>
+            <div class="port">
+                <img src="img/img6.png" alt="">
+                <div class="main-box">
+                    <div class="box-text">
+                        <h5>Development</h5>
+                    </div>
+                    <div class="box-icon">
+                        <i class="bx bx-heart"></i>
+                    </div>
+                </div>
+                <h3>Website Developmeny & Design</h3>
+            </div>
+            <div class="port">
+                <img src="img/img1.png" alt="">
+                <div class="main-box">
+                    <div class="box-text">
+                        <h5>Development</h5>
+                    </div>
+                    <div class="box-icon">
+                        <i class="bx bx-heart"></i>
+                    </div>
+                </div>
+                <h3>Website Developmeny & Design</h3>
+            </div>
+            <div class="port">
+                <img src="img/img3.png" alt="">
+                <div class="main-box">
+                    <div class="box-text">
+                        <h5>Development</h5>
+                    </div>
+                    <div class="box-icon">
+                        <i class="bx bx-heart"></i>
+                    </div>
+                </div>
+                <h3>Website Developmeny & Design</h3>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section End -->
+
+
+    <!-- Contact Section Start -->
+    <section id="contact" class="contact">
+        <div class="contact-text">
+            <h2>Contact Me</h2>
+            <h4>Contact With Us Any Time</h4>
+            <p>Lorem ipsum, dolor st. Fugit, harum sunt! Totam officia maiores
+                praesentium?</p>
+            <div class="contact-list">
+                <ul>
+                    <li>Bogotá, Colombia</li>
+                    <li>camiloyps@hotmail.com</li>
+                    <li>+57 313 8414725</li>
+                </ul>
+            </div>
+            <div class="social-icons">
+                <a href="https://www.linkedin.com/in/camiloyps/"><i class="bx bxl-linkedin"></i></a>
+                <a href="https://www.facebook.com/CamiloYps"><i class="bx bxl-facebook"></i></a>
+                <a href="https://www.instagram.com/camiloyps/"><i class="bx bxl-instagram"></i></a>
+                <a href="https://wa.me/+573138414725"><i class="bx bxl-whatsapp"></i></a>
+            </div>
+        </div>
+        <div class="contact-form">
+            <form id="form">
+                <input type="text" name="sendername" id="sendername" placeholder="Sender name" required>
+                <input type="text" name="subject" id="subject" placeholder="Subject" required>
+                <textarea type="text" name="message" id="message" cols="30" rows="10"
+                    placeholder="Enter Your Message" required></textarea>
+                <input class="send" type="submit" id="button" value="Send Email">
+                <div id="messageBox" class="message-box"></div>
+            </form>
+        </div>
+
+    </section>
+    <!-- Contact Section End -->
+    <div class="hr"></div>
+    <div class="copyright">
+        <div class="links">
+            <a href="#"><span>Home</span></a>
+            <a href="#"><span>Contact Us</span></a>
+            <a href="#"><span>Terms & Condition</span></a>
+            <a href="#"><span>Privacy Policy</span></a>
+
+        </div>
+        <div class="social-icons">
+            &copy; 2023 Oscar Rivero. Todos los derechos reservados.
+        </div>
+    </div>
+
+    <!---custom js links--->
+    <!--emailjs  -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+    <script type="text/javascript">
+        emailjs.init('SefSbCS1D2dlw90kp')
+    </script>
+
+    <!-- ------------------------- GoogleApi translate ------------------------- -->
+
+    <script src="script.js"></script>
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement(
+                { pageLanguage: 'en' },
+                'google_translate_element'
+            );
+        } 
+    </script>
+    <script type="text/javascript"
+        src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+
+    <!-- ------------------------------- js link ------------------------------- -->
+    <script src="script.js"></script>
+
+</body>
+
+</html>
